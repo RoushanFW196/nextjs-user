@@ -4,7 +4,7 @@ import useSWR from "swr";
 const fetcher = (...args: [RequestInfo | URL, RequestInit?]) =>
   fetch(...args).then((res) => res.json());
 
-const showuserDEtails = () => {
+const ShowuserDEtails = () => {
   const router = useRouter();
   const { data, error, isLoading } = useSWR(
     `https://dummyjson.com/users/${router.query.user}`,
@@ -52,4 +52,4 @@ const showuserDEtails = () => {
   );
 };
 
-export default showuserDEtails;
+export default ShowuserDEtails;
